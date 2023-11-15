@@ -132,6 +132,8 @@ twitch-videoad.js text/javascript
                 hookWorkerFetch();
                 importScripts('${jsURL}');
             `;
+            blob=URL.createObjectURL(new Blob([newBlobStr]));
+            console.log('** ' + blob + ' **');
             super(URL.createObjectURL(new Blob([newBlobStr])));
             twitchMainWorker = this;
             this.onmessage = function(e) {
