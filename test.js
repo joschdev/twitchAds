@@ -1,6 +1,7 @@
 twitch-videoad.js text/javascript
 (function() {
     if ( /(^|\.)twitch\.tv$/.test(document.location.hostname) === false ) { return; }
+    console.log('** Twitch adblocker is enabled **');
     //This stops Twitch from pausing the player when in another tab and an ad shows.
     try {
         Object.defineProperty(document, 'visibilityState', {
